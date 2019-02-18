@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Property_New1.master.cs" Inherits="Property.Property_New1" %>
+
+
+<%@ Register TagName="Logo" TagPrefix="uc" Src="~/Controls/logo.ascx" %>
+<%@ Register TagName="ContactInfo" TagPrefix="uc" Src="~/Controls/ContactInfo.ascx" %>
+<%@ Register TagName="SearchControl" TagPrefix="uc" Src="~/Controls/SearchControl.ascx" %>
+<%@ Register TagName="SearchBar" TagPrefix="uc" Src="~/Controls/SearchBar.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML>
+<html>
+<head runat="server">
+    <link id="favicon" runat="server" rel="shortcut icon" type="image/x-icon" />
+ 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)" />
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+
+<meta  id="fbProprtyImage" runat="server" property="og:image" content="" />
+    <meta  id="fbProprtyTitle" runat="server" property="og:title" content="" />
+    <meta  id="fbProprtyUrl" runat="server" property="og:url" content="" />   
+    <meta id="fbProprtyShareType" runat="server" property="og:type" content="" />
+    <meta id="fbProprtyDescription" runat="server" property="og:description" content="" />
+    <title><asp:Literal ID="siteTitle" runat="server"></asp:Literal></title> 
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/styleBackup.css" rel="stylesheet" />
+    <link href="css/style_002.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/shortcodes.css" rel="stylesheet" />
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="css/font.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/media-queries.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var docHeight = $(window).height();
+            var footerHeight = $('#one-footer').height();
+            var footerTop = $('#one-footer').position().top + footerHeight;
+
+            if (footerTop < docHeight) {
+                //$('#one-footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+            }
+        });
+    </script>
+</head>
+<body>
+    
+   <div class="header_bg prprty_detail_new">
+       <div class="container">
+                <div class="col-md-5 col-sm-5">
+                  <div class="header_detail">
+                    <h2>
+                        <asp:Label ID="lblBrkrOneName" CssClass="gjfdhg" runat="server"></asp:Label></h2>
+                    <p>Sales Representative</p>
+                  <h5>Call: <a href="tel:416-618-1251">416-618-1251</a></h5>
+                    
+                </div>
+                </div>
+           <div class="col-md-3 col-sm-3">
+                 <div class="top_social">
+                            <ul>
+                               <li><a href="https://www.facebook.com/harvinder.sohi.5030" target="_blank"><img src="images/socio_1.png" /></a></li>
+                                <li><a href="https://twitter.com/SohiHarv" target="_blank"><img src="images/socio_2.png" /></a></li>
+                                <li><a href="https://plus.google.com/100392434681162727078" target="_blank"><img src="images/socio_3.png" /></a></li>
+                               <%-- <li><a href="#"><img src="images/socio_4.png" /></a></li>--%>
+                       </ul>
+                        </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="top_header_section">
+                        <div class="top_login"> <span>Call: <a href="tel:416-618-1251">416-618-1251</a></span></div>
+                        <div class="header_detail_right">
+                 <i class="fa fa-envelope ftr_hdng2"></i>
+				    <a href="mailto:harv@sohirealtor.com"><asp:Label ID="lblemailid" runat="server"></asp:Label></a>
+                </div>
+                    </div>
+                  
+            </div>
+      </div>
+    </div>
+    
+   <div class="top_menu_bg">
+       <div class="container">
+       <div class="row frnt_line_cls">            
+           <div class="col-md-12 col-sm-12">
+                <div class="menu_section">
+                     <asp:Literal ID="dynamicmenus" runat="server"></asp:Literal>
+                </div>
+                    <script type="text/javascript" src="../js/script.js"></script>
+            </div>
+        </div>
+    </div>
+       </div>
+       
+    
+   
+        <div class="inner_banner">
+            <img alt="" src="images/banner-inner.jpg" />
+        </div>
+   
+
+   
+    <form id="Form1" runat="server">
+        <div class="container" id="containerdiv">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div class="fuutr_menu_bg">
+        <div class="container">
+            <div class="col-md-12 col-sm-12">
+                <div class="futer_mennu">
+                    <ul>
+                      <li><a href="../VirtualTour.aspx">Virtual Tour</a></li>
+                         <li><a href="../View_Testimonials.aspx">Testimonials</a></li>
+                        <li><a href="../RealEstateNews.aspx">Real Estate News</a></li>
+                        <li><a href="../ContactUs.aspx">Contact Us</a></li>
+						 <li><a href="../admin/adminlogin.aspx">Admin Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fuuter_bg" id="one-footer">
+        <div class="container">
+		<div class="row frnt_line_cls">
+            <div class="futer_sctnn">
+                <div class="col-md-4 col-sm-4">
+                    <div class="futer_logo">
+                     <img src="images/futer_logo.png" alt="" title=" Footer Logo">
+					</div>
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <div class="futer_addres">
+                     <h2>© HomeLife/Miracle Realty Ltd., Brokerage*</h2>
+                        <h4>Dir: 416-618-1251    |     Office: 416-747-9777</h4>
+                        <h4>5010 Steeles Ave. West #11A, Toronto, M9V2B8</h4>
+					</div>
+                </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+     <div class="footer">
+               <div class="container">
+<div class="col-md-6 col-sm-6">
+                <div class="footer_login">
+                    <ul>
+                    <li>
+                        <a href="PrivacyPolicy.aspx">Privacy Policy</a>
+                    </li>
+                        <li>
+                        <a href="/admin/adminlogin.aspx">Admin Login</a>
+                    </li>
+                        </ul>
+                </div>
+            </div>
+                   <div class="col-md-6 col-sm-6">
+                <div class="Design_and_developed">
+
+                    <p>
+                        Designed & Developed by <a href="http://only4agents.com/">Only4Agents</a>
+                    </p>
+                </div>
+            </div>
+               </div>
+               </div>
+
+     <div class="fuutr_phne_bg">
+                <div class="futer_mail_bg">
+                    <div class="futer_mail">
+                        <ul>
+                        <li><a href="mailto: harv@sohirealtor.com ">
+                            <img alt="" src="images/mail_icnnn.png" /></a></li>
+                        <li><a href="tel:416-618-1251">
+                            <img alt="" src="images/mbl_icnnn.png" /></a></li>
+                        <li><a href="sms:416-618-1251">
+                            <img alt="" src="images/sms.png" /></a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+      <script type="text/javascript" src="js/jquery_009.js"></script>
+    <script type="text/javascript" src="js/shortcodes.js"></script> 
+</body>
+</html>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129912557-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129912557-1');
+</script>
